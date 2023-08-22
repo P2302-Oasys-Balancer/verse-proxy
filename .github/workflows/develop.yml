@@ -11,7 +11,7 @@ permissions:
 
 env:
   AWS_REGION: ap-southeast-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: verse_proxy         # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: verser_proxy         # set this to your Amazon ECR repository name
   ECS_SERVICE: randao_backend                # set this to your Amazon ECS service name
   ECS_CLUSTER: testnet                 # set this to your Amazon ECS cluster name
 
