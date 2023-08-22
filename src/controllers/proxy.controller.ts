@@ -14,6 +14,8 @@ import { Response } from 'express';
 import { ProxyService, TypeCheckService } from 'src/services';
 import { VerseRequestResponse, RequestContext } from 'src/entities';
 
+const packageInfo = require('../../package.json');
+
 @Controller()
 export class ProxyController {
   constructor(
@@ -26,7 +28,7 @@ export class ProxyController {
   async health(
     @Res() res: Response,
   ) {
-    res.status(200).send({ status: 'OK' });
+    res.status(200).send({ status: 'OK', name: packageInfo.name, version: packageInfo.version });
   }
 
   @Post()
