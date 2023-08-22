@@ -48,11 +48,14 @@ export class VerseService {
       if (key.slice(0, 2) === 'x-' && typeof value === 'string') {
         verseHeaders[key] = value;
       }
-    }
+    } 
     if (this.inheritHostHeader && headers['host']) {
       verseHeaders['host'] = headers['host'];
     }
     const axiosConfig = { headers: verseHeaders };
+
+    console.log('=======post verseHeaders:', verseHeaders)
+    console.log('=======post body:', body)
 
     const res = await lastValueFrom(
       this.httpService.post(verseUrl, body, axiosConfig).pipe(
@@ -61,7 +64,8 @@ export class VerseService {
           throw e;
         }),
       ),
-    );
+    );    
+    
     return {
       status: res.status,
       data: res.data,

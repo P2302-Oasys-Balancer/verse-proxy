@@ -15,6 +15,7 @@ export default () => ({
     /^eth_sendRawTransaction$/,
     /^eth_chainId$/,
     /^eth_blockNumber$/,
+    /^eth_getBlockByNumber$/,
     /^eth_call$/,
     /^eth_estimateGas$/,
     /^eth_gasPrice$/,
@@ -22,5 +23,5 @@ export default () => ({
     /^eth_feeHistory$/,
     /^eth_.*Filter$/,
   ],
-  inheritHostHeader: true,
+  inheritHostHeader: false,
 });

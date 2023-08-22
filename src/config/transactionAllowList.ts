@@ -33,7 +33,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 };
 
 export const getDeployAllowList = (): Array<string> => {
-  return ['*'];
+  return ['0x68C297EDdd953961E81532202e48b048e459c7c3'];
 };
 
 export const getUnlimitedTxRateAddresses = (): Array<string> => {
