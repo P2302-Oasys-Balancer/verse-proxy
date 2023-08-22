@@ -1,6 +1,7 @@
 import {
   Controller,
   Post,
+  Get,
   Headers,
   Body,
   ForbiddenException,
@@ -19,7 +20,14 @@ export class ProxyController {
     private configService: ConfigService,
     private readonly typeCheckService: TypeCheckService,
     private readonly proxyService: ProxyService,
-  ) {}
+  ) { }
+
+  @Get()
+  async health(
+    @Res() res: Response,
+  ) {
+    res.status(200).send({ status: 'OK' });
+  }
 
   @Post()
   async post(
@@ -58,6 +66,7 @@ export class ProxyController {
     res: Response,
   ) {
     const callback = (result: VerseRequestResponse) => {
+      console.log('===controller callback:', result)
       const { status, data } = result;
       res.status(status).send(data);
     };

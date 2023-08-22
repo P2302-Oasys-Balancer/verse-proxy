@@ -70,6 +70,7 @@ export class ProxyService {
     requestContext: RequestContext,
     body: JsonrpcRequestBody,
   ) {
+    console.log('===proxy send')
     try {
       const method = body.method;
       const { headers } = requestContext;
@@ -89,7 +90,7 @@ export class ProxyService {
         method === 'eth_blockNumber' &&
         this.isUseBlockNumberCache &&
         isMetamaskAccess
-      ) {
+      ) {        
         return await this.txService.getBlockNumberCacheRes(
           requestContext,
           body.jsonrpc,
