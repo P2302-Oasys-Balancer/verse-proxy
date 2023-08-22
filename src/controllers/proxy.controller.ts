@@ -22,7 +22,7 @@ export class ProxyController {
     private readonly proxyService: ProxyService,
   ) { }
 
-  @Get()
+  @Get('health')
   async health(
     @Res() res: Response,
   ) {
