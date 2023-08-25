@@ -33,7 +33,14 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 };
 
 export const getDeployAllowList = (): Array<string> => {
-  return ['0x68C297EDdd953961E81532202e48b048e459c7c3'];
+  return [
+    '0x68C297EDdd953961E81532202e48b048e459c7c3',
+    '0xA9670dC72Edc9f4FB01f4DC0ba7F85CC62a152ff',
+    '0xDd55AcB0f5305040F4242EA8DBa5417b5b76c20f',
+    '0x68C297EDdd953961E81532202e48b048e459c7c3',
+    '0x5E07339ef374E362E597AED56786F9D3FfA44C99',
+    '0x7fA458110953C5D41e2cb4B398A20c1A28247F47',
+  ];
 };
 
 export const getUnlimitedTxRateAddresses = (): Array<string> => {
