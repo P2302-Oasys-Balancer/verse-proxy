@@ -31,6 +31,13 @@ export class ProxyController {
     res.status(200).send({ status: 'OK', name: packageInfo.name, version: packageInfo.version });
   }
 
+  @Get()
+  async get(
+    @Res() res: Response,
+  ) {
+    res.status(200).send('');
+  }
+
   @Post()
   async post(
     @RealIP() ip: string, // https://github.com/p0vidl0/nestjs-real-ip#under-the-hood
@@ -68,7 +75,6 @@ export class ProxyController {
     res: Response,
   ) {
     const callback = (result: VerseRequestResponse) => {
-      console.log('===controller callback:', result)
       const { status, data } = result;
       res.status(status).send(data);
     };
