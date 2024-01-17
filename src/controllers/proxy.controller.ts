@@ -31,12 +31,12 @@ export class ProxyController {
     res.status(200).send({ status: 'OK', name: packageInfo.name, version: packageInfo.version });
   }
 
-  @Get()
-  async get(
-    @Res() res: Response,
-  ) {
-    res.status(200).send('');
-  }
+  // @Get()
+  // async get(
+  //   @Res() res: Response,
+  // ) {
+  //   res.status(200).send('');
+  // }
 
   @Post()
   async post(
