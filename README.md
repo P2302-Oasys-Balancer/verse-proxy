@@ -306,3 +306,4 @@ All transactions sent to `/master` are sent to the Master-Verse-Node.
 By returning the cache of blockNumber to the metamask, the number of accesses to the metamask can be reduced.
 For more detail, check the following doc.
 [Reduce Metamask Access](/docs/MetamaskAccess.md)
+
