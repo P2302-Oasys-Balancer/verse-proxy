@@ -22,6 +22,8 @@ export default () => ({
     /^eth_maxPriorityFeePerGas$/,
     /^eth_feeHistory$/,
     /^eth_.*Filter$/,
+    /^debug_traceTransaction$/,
+    /^traceTransaction$/,
   ],
   inheritHostHeader: false,
 });
